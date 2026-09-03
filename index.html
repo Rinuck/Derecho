@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bitácora de Escape Fiscal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6 font-sans">
+
+  <header class="max-w-5xl mx-auto text-center py-8 border-b border-slate-700">
+    <h1 class="text-4xl font-extrabold text-amber-400 mb-2">
+      Bitácora de Escape Fiscal
+    </h1>
+    <p class="text-slate-400 text-lg">
+      Desafío de los 15 Acertijos — Derechos del Contribuyente
+    </p>
+  </header>
+
+  <main class="max-w-5xl mx-auto mt-8 space-y-12">
+    
+    <!-- Mapa Mental -->
+    <section class="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4">
+        1. Mapa Mental: Los 10 Derechos del Contribuyente
+      </h2>
+      <div class="bg-slate-950 p-4 rounded-lg flex justify-center items-center mb-6">
+        <!-- Nombre de la imagen del mapa mental -->
+        <img src="mapa-mental.jpg" alt="Mapa mental 10 Derechos PRODECON" class="max-h-96 rounded object-contain border border-slate-800" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-300">
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">1. Tratado con respeto y consideración</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">2. Información clara y oportuna</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">3. Asistencia gratuita</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">4. Confidencialidad y protección de datos</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">5. Impugnar y defenderte</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">6. Pagar lo justo</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">7. Legalidad</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">8. Certeza jurídica y presunción de buena fe</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">9. Facilidad administrativa</div>
+        <div class="bg-slate-900 p-3 rounded border border-slate-800">10. Ser escuchado y autocorrección</div>
+      </div>
+    </section>
+
+    <!-- Acertijos -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-amber-300">
+        2. Solución a los 15 Acertijos
+      </h2>
+      <div id="acertijos-container" class="grid gap-4">
+        <!-- Render dinámico -->
+      </div>
+    </section>
+
+    <!-- Conclusión y PRODECON -->
+    <section class="grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+        <h3 class="text-xl font-bold text-amber-300 mb-2">Conclusión</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          El conocimiento de los derechos del contribuyente es indispensable para evitar arbitrariedades en revisiones fiscales. Garantiza un equilibrio frente a la autoridad, asegurando el debido proceso y previniendo sanciones injustas.
+        </p>
+      </div>
+      <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+        <h3 class="text-xl font-bold text-amber-300 mb-2">¿Dónde buscar ayuda?</h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-2">
+          <strong>PRODECON (Procuraduría de la Defensa del Contribuyente):</strong>
+        </p>
+        <ul class="list-disc list-inside text-xs text-slate-400 space-y-1">
+          <li>Asesoría jurídica gratuita.</li>
+          <li>Representación legal y quejas contra el SAT.</li>
+          <li>Sitio Oficial: <a href="https://www.prodecon.gob.mx" target="_blank" class="text-amber-400 underline">prodecon.gob.mx</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const acertijos = [
+      { num: 1, prob: "Correo informal, intimidante y sin orden ni justificación legal.", llave: "Derecho 1 (Trato respetuoso) y Derecho 2 (Información)", sol: "Exigir que las comunicaciones sean por escrito, profesionales y detallando la orden formal y su alcance legal." },
+      { num: 2, prob: "Exigencia por teléfono para entregar 5 años de contabilidad bajo amenaza de sanciones.", llave: "Derecho 7 (Legalidad) y Derecho 2 (Información)", sol: "La empresa no entregará información sin una orden escrita y fundamentada que precise las contribuciones y periodos a revisar." },
+      { num: 3, prob: "Acusación con prejuicios sobre startups ('contabilidad creativa') y petición inmotivada de lista de clientes.", llave: "Derecho 8 (Presunción de buena fe) y Derecho 4 (Confidencialidad)", sol: "Rechazar la entrega de datos de clientes por falta de justificación legal y exigir una revisión imparcial y sin prejuicios." },
+      { num: 4, prob: "El auditor se niega a recibir un escrito formal para delimitar la revisión.", llave: "Derecho 3 (Derecho de petición) y Derecho 10 (Ser escuchado)", sol: "Exigir la recepción y acuse del documento; la autoridad debe responder por escrito las peticiones formales." },
+      { num: 5, prob: "Calificación de error como 'omisión grave' e ignorancia del cobro en exceso hecho por el SAT.", llave: "Derecho 8 (Presunción de buena fe) y Derecho 6 (Pagar lo justo)", sol: "El auditor debe probar la mala fe antes de calificar agravantes y debe considerar el cobro cobrado de más para ajustar la cifra justa." },
+      { num: 6, prob: "Divulgación de datos financieros sensibles a un tercero (proveedor) vía correo con tono sarcástico.", llave: "Derecho 4 (Confidencialidad) y Derecho 1 (Trato respetuoso)", sol: "Presentar queja ante el Órgano Interno del SAT / PRODECON por violación de secrecía y exigir trato ético y profesional." },
+      { num: 7, prob: "Descalificación de un software como 'lujo' y exigencia de peritaje en 48 hrs.", llave: "Derecho 2 (Información) y Derecho 8 (Certeza jurídica)", sol: "Exigir el fundamento legal del cuestionamiento y rechazar plazos arbitrarios no previstos en la ley." },
+      { num: 8, prob: "Auditor ignora expediente con 200 pruebas porque 'no ha tenido tiempo de ver la caja'.", llave: "Derecho 10 (Ser escuchado y valoración de pruebas)", sol: "Exigir la revisión formal y valoración obligatoria de todas las pruebas aportadas antes de emitir cualquier resolución." },
+      { num: 9, prob: "Desecho arbitrario de jurisprudencia judicial usando de pretexto el manual interno del SAT.", llave: "Derecho 7 (Legalidad) y Derecho 10 (Ser escuchado)", sol: "Invocar la jerarquía normativa; las decisiones del Poder Judicial prevalecen sobre criterios y manuales internos administrativos." },
+      { num: 10, prob: "Negativa a expedir copia certificada de una declaración presente en el expediente enviando a un trámite de 90 días.", llave: "Derecho 3 (Petición/Copias) y Derecho 9 (Facilidad administrativa)", sol: "Solicitar la entrega directa de copias certificadas por estar bajo el expediente en revisión activa." },
+      { num: 11, prob: "Tratar una declaración complementaria voluntaria como 'confesión' y agravante para multas.", llave: "Derecho 10 (Autocorrección fiscal) y Derecho 8 (Presunción de buena fe)", sol: "Aclarar que corregir voluntariamente es ejercer la autocorrección fiscal, la cual atenuará las multas en lugar de agravarlas." },
+      { num: 12, prob: "Requerimiento de Acta Constitutiva y Cédula RFC que ya obran en poder del SAT.", llave: "Derecho 9 (Facilidad administrativa y no duplicidad de entregas)", sol: "Responder formalmente indicando la fecha y trámite previo donde fueron entregados para eximir la entrega duplicada." },
+      { num: 13, prob: "Auditor dista de estar atento en videollamada, usando teléfono y bostezando.", llave: "Derecho 1 (Trato respetuoso) y Derecho 10 (Ser escuchado)", sol: "Exigir minuta formal de la sesión, reprogramación o sustitución del funcionario por falta de profesionalismo." },
+      { num: 14, prob: "Resolución final enviada en hoja sin desglose, sin fundamento, sin firma y sin indicar medios de defensa.", llave: "Derecho 7 (Legalidad), Derecho 2 (Información) y Derecho 5 (Impugnar)", sol: "El acto es nulo de pleno derecho por carecer de formalidades constitucionales y legales; se promueve recurso para anularlo." },
+      { num: 15, prob: "Plazo ilegal de 10 días de pago indicando falsamente que el acto es 'final y definitivo'.", llave: "Derecho 5 (Impugnar y defenderse) y Derecho 8 (Certeza jurídica)", sol: "Interponer Recurso de Revocación o Juicio de Nulidad dentro del plazo real de ley (30 días hábiles)." }
+    ];
+
+    const container = document.getElementById('acertijos-container');
+    acertijos.forEach(a => {
+      container.innerHTML += `
+        <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 shadow-lg">
+          <h3 class="text-lg font-bold text-amber-400 mb-2">Acertijo #${a.num}</h3>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold text-rose-400">Problema:</span> ${a.prob}</p>
+            <p><span class="font-semibold text-sky-400">Llave:</span> ${a.llave}</p>
+            <p><span class="font-semibold text-emerald-400">Solución:</span> ${a.sol}</p>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
